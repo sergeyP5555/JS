@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="style_for_projects.css" rel="stylesheet">
+    <title>Projects</title>
+</head>
+<body>
+<!--.........................................RandomGenerator............................................................-->
+<div class="random_block">
+<input type="text" id="numberFrom"  placeholder="Введите значение От:">
+<input type="text" id="numberTo"  placeholder="Введите значение До:">
+<input type="text" id="numberAmount"  placeholder="Введите кол-во чисел:">
+<input type="button" id="numberGen" onclick="getResult()" value="Сгенерировать"><br>
+    <textarea id="conclusion" size="50" placeholder="Результат"></textarea>
+</div>
+<br><br><hr><br><br>
+
+<!--.............................................Calculator.............................................................-->
+<div class="calculator">
+    <input type="text" id="result" name="display" placeholder="0" disabled> <br>
+
+    <div class="basis">
+        <div class="section">
+            <input type="button" class="button rst" name="reset" onclick="clearScreen()" value="C">
+            <input type="button" class="button mth" name="comma" onclick = "display('.')" value=".">
+            <input type="button" class="button mth" name="percent" onclick = "display('%')" value="%">
+            <input type="button" class="button mth" name="segmentation" onclick = "display('/')" value="÷">
+        </div>
+        <div class="section">
+            <input type="button" class="button" name="seven" onclick = "display('7')" value="7">
+            <input type="button" class="button" name="eight" onclick = "display('8')" value="8">
+            <input type="button" class="button" name="nine" onclick = "display('9')" value="9">
+            <input type="button" class="button mth" name="multiplication" onclick = "display('*')" value="*">
+        </div>
+        <div class="section">
+            <input type="button" class="button" name="four" onclick = "display('4')" value="4">
+            <input type="button" class="button" name="five" onclick = "display('5')" value="5">
+            <input type="button" class="button" name="six" onclick = "display('6')" value="6">
+            <input type="button" class="button mth" name="minus" onclick = "display('-')" value="-">
+        </div>
+        <div class="section">
+            <input type="button" class="button" name="one" onclick = "display('1')" value="1">
+            <input type="button" class="button" name="two" onclick = "display('2')" value="2">
+            <input type="button" class="button" name="three" onclick = "display('3')" value="3">
+            <input type="button" class="button mth" name="plus" onclick = "display('+')" value="+">
+        </div>
+        <div class="section">
+            <input type="button" class="button" name="plug" disabled>
+            <input type="button" class="button" name="zero" onclick = "display('0')" value="0" id="zero">
+            <input type="button" class="button" name="plug" disabled>
+            <input type="button" class="button eval" name="equals" onclick = "calculate()" value="=" id="equal">
+        </div>
+
+    </div>
+</div>
+<br><br><hr><br><br>
+<!--..........................................Millionaire game..........................................................-->
+
+
+<div class="foundation">
+    <div class="game_area">
+        <div class="answer">
+        </div>
+        <div class="question">
+        </div>
+        <div class="help">
+            <input type="button" class="help_btn" id="fifty_fifty" value="50:50">
+            <input type="button" class="help_btn" id="call_friend" value="Call">
+            <input type="button" class="help_btn" id="hall_help" value="Hall Help">
+        </div>
+        <div class="options">
+            <div class="block_options">
+                <input type="button" class="answ_options" id="answ_A" value="A: Каждый день">
+                <input type="button" class="answ_options" id="answ_B" value="B: Никогда">
+            </div>
+            <div class="block_options">
+                <input type="button" class="answ_options" id="answ_C" value="C: Раз в день">
+                <input type="button" class="answ_options" id="answ_D" value="D: Раз в неделю">
+            </div>
+        </div>
+    </div>
+    <div class="prize">
+        <div class="issue_price">
+        <ol class="win_list" style reversed>
+            <li>1,000,000</li>
+            <li>500,000</li>
+            <li>250,000</li>
+            <li>125,000</li>
+            <li>64,000</li>
+            <li>32,000</li>
+            <li>16,000</li>
+            <li>8,000</li>
+            <li>4,000</li>
+            <li>2,000</li>
+            <li>1,000</li>
+            <li>500</li>
+            <li>300</li>
+            <li>200</li>
+            <li>100</li>
+        </ol>
+        </div>
+        <div class="current_prize">
+
+        </div>
+    </div>
+</div>
+<br><br><hr><br><br>
+
+<script src="Generator.js"></script>
+<script src="Calculator.js"></script>
+<script src="Millionaire.js"></script>
+</body>
+</html>
